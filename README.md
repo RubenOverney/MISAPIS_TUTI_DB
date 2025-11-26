@@ -1,60 +1,43 @@
 --Nombre del proyecto.--
 # MISAPIS_TUTI_DB
 
+
 --Instrucciones para la instalación y ejecución del backend.--
-1. Requisitos previos
+# 1. Requisitos previos
 Antes de iniciar, hay que tener instalado:
 
 * Node.js (v16 o superior) 
 * MongoDB 
 * Git
   
-2. Clonar o descargar el proyecto
+# 2. Clonar o descargar el proyecto
+Usando el Git clonanos el repositorio:
+  git clone https://github.com/RubenOverney/MISAPIS_TUTI_DB.git
 
-Usando el Git clonanos el repositorio :
-
-git clone https://github.com/RubenOverney/MISAPIS_TUTI_DB.git
-
-3. Instalar dependencias
-
+# 3. Instalar dependencias
 Ejecutamos en la terminal:
+  npm install ---> Esto instalará todos los paquetes listados en package.json.
 
-npm install ---> Esto instalará todos los paquetes listados en package.json.
-
-4. Configurar variables de entorno
-
+# 4. Configurar variables de entorno
 El backend utiliza un archivo .env para definir la conexión a MongoDB y otras configuraciones.
+  Creamos un archivo .env en la raíz del proyecto y agrega:
 
-Crea un archivo .env en la raíz del proyecto y agrega:
+    MONGO_URI=mongodb+srv://overney:12345@overney.tegjgd3.mongodb.net/?appName=Overney/misapis 
+    PORT=3000
 
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/tuti_db
-
-5. Configurar la base de datos
-
+# 5. Configurar la base de datos
 El archivo:
+  db/cnn_mongodb.js -----> se encarga de conectar con MongoDB automáticamente cuando inicias el servidor.
 
-db/cnn_mongodb.js
-
-6. Ejecutar el servidor
-
+# 6. Ejecutar el servidor
 Iniciamos el backend con:
+  npm start
 
-npm start
-
-7. Verificar que el backend está funcionando
-
-Abre tu navegador o Postman e ingresa a una ruta de prueba:
-
-http://localhost:3000/api/tuti
-
-
-Si todo está correcto, deberías ver un JSON o un arreglo vacío
-
-
-se encarga de conectar con MongoDB automáticamente cuando inicias el servidor.
-
-Si usas MongoDB Atlas, reemplaza MONGODB_URI por tu cadena de conexión.
+# 7. Verificar que el backend está funcionando
+Abrimos un navegador o Postman e ingresamos a una ruta de prueba:
+  http://localhost:3000/api/tuti
+Si todo está correcto, deberiamos ver un JSON o un arreglo vacío
+Este encarga de conectar con MongoDB automáticamente cuando inicias el servidor.
 
 
 --Descripción de las rutas de la API.--
